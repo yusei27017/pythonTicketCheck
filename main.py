@@ -27,14 +27,13 @@ if __name__ == "__main__":
 
     tikct_html = res_html.text.replace('\n','')
     log_in_status = re.findall('(林藤恩)', tikct_html)
-    if log_in_status is not None:
+    if len(log_in_status) != 0:
         info = "[I] login success!!"
     else:
-        info = "[W] login failed!!"
+        info = "[W] login failed!! need refresh cookie.."
     log_write(info)
 
-   
-    # origin
+    #start geting prod status 
     match_pattern = 'class="fcTxt">(.*?)</tr>'
     tikct_data = re.findall(match_pattern, tikct_html)
     flag = False
