@@ -53,10 +53,10 @@ if __name__ == "__main__":
         # print("https://tixcraft.com" + data_dict['link'].replace('detail', 'game'))
         if find_log_by_link(link):
             insert_log(data_dict)
-            log_write("[I] new log was inserted, title is "+ title)
+            log_write("[I] new log has been inserted, title is "+ title)
             flag = True
     if flag:
-        lineNotifyMessage(token, "[I] website was update, plz check out website!")
+        lineNotifyMessage(token, "[I] website has been updated, plz check out website!")
     else:
         log_write("[I] the website is not up to date yet...")
         
