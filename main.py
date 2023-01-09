@@ -31,6 +31,7 @@ if __name__ == "__main__":
         info = "[I] login success!!"
     else:
         info = "[W] login failed!! need refresh cookie.."
+        lineNotifyMessage(line_token, "[W] login failed！")
     log_write(info)
 
     #start geting prod status 
